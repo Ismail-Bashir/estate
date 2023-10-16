@@ -33,12 +33,13 @@ export default function Signup() {
   if(data.success=== false){
     setLoading(false);
     setError(data.message);
-    navigate('/sign-in');
+   
   
     return;
    }
    setLoading(false);
    setError(false);
+   navigate('/sign-in');
   } catch (error) {
     setLoading(false);
     setError(error.message);
